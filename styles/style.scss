@@ -1,0 +1,58 @@
+$darkerBG: #181818;
+$background: #282828;
+$lighterBG: #383838;
+$textColor: gray;
+$highlight: orange;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+header {
+  grid-column: 1;
+  height: 100vh;
+  background-color: $lighterBG;
+  width: 1fr;
+  position: fixed;
+  border-right: 1px solid $highlight;
+  z-index: 100;
+}
+
+section {
+  display: grid;
+  align-content: center;
+  grid-column: 2/5;
+  text-align: center;
+  width: 5fr;
+  height: 100vh;
+  background-color: $background;
+  color: $textColor;
+}
+
+footer {
+  display: grid;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  bottom: -10vh;
+  background-color: $darkerBG;
+  height: 10vh;
+  width: 100%;
+  z-index: 200;
+}
+
+h1 {
+  color: $highlight;
+  font-family: "Merriweather", serif;
+  font-size: 10vw;
+}
