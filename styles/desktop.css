@@ -11,21 +11,21 @@ html {
       scroll-snap-type: y proximity;
 }
 
-main {
+html main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 5fr;
       grid-template-columns: 1fr 5fr;
 }
 
-main #home {
+html main #home {
   background-attachment: fixed;
   background-size: 100%;
   background-repeat: no-repeat;
   background-image: url("../images/background1.jpg");
 }
 
-header {
+html header {
   -ms-grid-column: 1;
   grid-column: 1;
   background-color: #383838;
@@ -41,7 +41,7 @@ header {
   transition: margin-left 1s;
 }
 
-header .navButton {
+html header .navButton {
   display: block;
   text-align: center;
   padding: 1em 2em;
@@ -51,17 +51,16 @@ header .navButton {
   border: 1px solid orange;
 }
 
-header .navButton:first-of-type {
+html header .navButton:first-of-type {
   margin-top: 230px;
 }
 
-.slideBarTrigger {
+html .slideBarTrigger {
   margin-left: 0px;
 }
 
-#meBubble {
+html #meBubble {
   position: fixed;
-  background-color: #383838;
   background-image: url(../images/profile_image.jpg);
   background-size: cover;
   left: 50%;
@@ -72,18 +71,18 @@ header .navButton:first-of-type {
   border-radius: 50%;
   margin-left: -150px;
   z-index: 125;
-  -webkit-transition: width 1s, height 1s, left 1s, top 1s;
-  transition: width 1s, height 1s, left 1s, top 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-#meBubble.meBubbleTrigger {
+html #meBubble.meBubbleTrigger {
   left: 250px;
   top: 15px;
   width: 200px;
   height: 200px;
 }
 
-section {
+html section {
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
@@ -100,9 +99,10 @@ section {
   background-color: #282828;
   color: gray;
   scroll-snap-align: start;
+  z-index: 1;
 }
 
-footer {
+html footer {
   color: gray;
   display: -ms-grid;
   display: grid;
@@ -117,13 +117,18 @@ footer {
   z-index: 200;
 }
 
-h1 {
+html h1 {
   color: orange;
   font-family: "Merriweather", serif;
   font-size: 6vw;
 }
 
-#myName {
+html #myName {
   margin-top: 290px;
+  padding-bottom: 20px;
 }
-/*# sourceMappingURL=style.css.map */
+
+html .headline {
+  z-index: 0;
+}
+/*# sourceMappingURL=desktop.css.map */
