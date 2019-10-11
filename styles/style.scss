@@ -21,12 +21,9 @@ main {
   grid-template-columns: 1fr 5fr;
   #home {
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-image: url("../images/background1.jpg");
-    animation-name: background-shift;
-    animation-duration: 1s;
-    animation-fill-mode: both;
   }
 }
 
@@ -39,9 +36,8 @@ header {
   border-right: 1px solid $highlight;
   z-index: 100;
   box-shadow: 5px 0 5px;
-  animation-name: sidebar-slide-in;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  margin-left: -300px;
+  transition: margin-left 1s;
   .navButton {
     display: block;
     text-align: center;
@@ -55,37 +51,50 @@ header {
     }
   }
 }
+.slideBarTrigger {
+  margin-left: 0px;
+}
 
 #meBubble {
   position: fixed;
   background-color: $lighterBG;
-  left: 58vw;
+  background-image: url(../images/profile_image.jpg);
+  background-size: cover;
+  left: 50%;
   top: 10vh;
+  width: 300px;
+  height: 300px;
   border: 1px solid $highlight;
   border-radius: 50%;
   margin-left: -150px;
-  width: 300px;
-  height: 300px;
   z-index: 125;
-  animation-name: meBubble;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  transition: width 1s, height 1s, left 1s, top 1s;
+}
+#meBubble.meBubbleTrigger {
+  left: 250px;
+  top: 15px;
+  width: 200px;
+  height: 200px;
 }
 
 section {
   display: grid;
   align-content: center;
-  grid-column: 1/3;
   text-align: center;
+  grid-column: 1/3;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
+  float: right;
   background-color: $background;
   color: $textColor;
   scroll-snap-align: start;
   //   &:first-of-type {
   //     align-content: end;
+  //   }
+  //   .headline {
+  //     margin-left: 10vw;
   //   }
 }
 
@@ -105,54 +114,9 @@ footer {
 h1 {
   color: $highlight;
   font-family: "Merriweather", serif;
-  font-size: 6em;
+  font-size: 6vw;
 }
 
 #myName {
-  position: relative;
-  animation-name: myName;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes sidebar-slide-in {
-  0% {
-    margin-left: -300px;
-  }
-  100% {
-    margin-left: 0px;
-  }
-}
-
-@keyframes myName {
-  0% {
-    left: -200px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-@keyframes background-shift {
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: 100px;
-  }
-}
-
-@keyframes meBubble {
-  0% {
-    left: 50%;
-    top: 10vh;
-    width: 300px;
-    height: 300px;
-  }
-  100% {
-    left: 250px;
-    top: 15px;
-    width: 200px;
-    height: 200px;
-  }
+  margin-top: 290px;
 }
