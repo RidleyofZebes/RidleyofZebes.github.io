@@ -11,35 +11,86 @@ $highlight: orange;
 
 html {
   position: relative;
+  background-color: $background;
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 5fr;
+  #home {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/background1.jpg");
+    animation-name: background-shift;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 }
 
 header {
   grid-column: 1;
-  height: 100vh;
   background-color: $lighterBG;
-  width: 1fr;
+  height: 100vh;
+  width: 200px;
   position: fixed;
   border-right: 1px solid $highlight;
   z-index: 100;
+  box-shadow: 5px 0 5px;
+  animation-name: sidebar-slide-in;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  .navButton {
+    display: block;
+    text-align: center;
+    padding: 1em 2em;
+    margin: 1.5em;
+    color: $highlight;
+    text-decoration: none;
+    border: 1px solid $highlight;
+    &:first-of-type {
+      margin-top: 230px;
+    }
+  }
+}
+
+#meBubble {
+  position: fixed;
+  background-color: $lighterBG;
+  left: 58vw;
+  top: 10vh;
+  border: 1px solid $highlight;
+  border-radius: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+  z-index: 125;
+  animation-name: meBubble;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 section {
   display: grid;
   align-content: center;
-  grid-column: 2/5;
+  grid-column: 1/3;
   text-align: center;
-  width: 5fr;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100vh;
   background-color: $background;
   color: $textColor;
+  scroll-snap-align: start;
+  //   &:first-of-type {
+  //     align-content: end;
+  //   }
 }
 
 footer {
+  color: $textColor;
   display: grid;
   align-content: center;
   text-align: center;
@@ -54,5 +105,54 @@ footer {
 h1 {
   color: $highlight;
   font-family: "Merriweather", serif;
-  font-size: 10vw;
+  font-size: 6em;
+}
+
+#myName {
+  position: relative;
+  animation-name: myName;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes sidebar-slide-in {
+  0% {
+    margin-left: -300px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes myName {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes background-shift {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
+
+@keyframes meBubble {
+  0% {
+    left: 50%;
+    top: 10vh;
+    width: 300px;
+    height: 300px;
+  }
+  100% {
+    left: 250px;
+    top: 15px;
+    width: 200px;
+    height: 200px;
+  }
 }
