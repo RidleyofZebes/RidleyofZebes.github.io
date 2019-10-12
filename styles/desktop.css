@@ -11,6 +11,15 @@ html {
       scroll-snap-type: y proximity;
 }
 
+html a {
+  color: orange;
+  text-decoration: none;
+}
+
+html p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 html main {
   display: -ms-grid;
   display: grid;
@@ -123,12 +132,52 @@ html h1 {
   font-size: 6vw;
 }
 
-html #myName {
+html #headline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html #headline .myName {
   margin-top: 290px;
   padding-bottom: 20px;
 }
 
-html .headline {
-  z-index: 0;
+html #headline .greeting {
+  position: relative;
+  top: 300px;
+  right: 32vw;
+  font-family: "Handlee", cursive;
+  font-size: 1.8em;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+html #headline .highlight {
+  color: orange;
+}
+
+html #about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 220px 1fr 1fr;
+      grid-template-columns: 220px 1fr 1fr;
+  grid-gap: 2em;
+  justify-items: start;
+}
+
+html #about .title {
+  margin-top: -150px;
+  margin-left: 55px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+html #about p {
+  text-align: left;
 }
 /*# sourceMappingURL=desktop.css.map */

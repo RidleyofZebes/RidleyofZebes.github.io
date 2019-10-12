@@ -11,6 +11,15 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
 
+  a {
+    color: $highlight;
+    text-decoration: none;
+  }
+
+  p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
   main {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -105,13 +114,41 @@ html {
     font-family: $gFont;
     font-size: 6vw;
   }
-
-  #myName {
-    margin-top: 290px;
-    padding-bottom: 20px;
+  #headline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    .myName {
+      margin-top: 290px;
+      padding-bottom: 20px;
+    }
+    .greeting {
+      position: relative;
+      top: 300px;
+      right: 32vw;
+      font-family: $hFont;
+      font-size: 1.8em;
+      transform: rotate(-20deg);
+    }
+    .highlight {
+      color: $highlight;
+    }
   }
-
-  .headline {
-    z-index: 0;
+  #about {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr;
+    grid-gap: 2em;
+    justify-items: start;
+    .title {
+      margin-top: -150px;
+      margin-left: 55px;
+      grid-column: 2/4;
+    }
+    p {
+      text-align: left;
+    }
   }
 }
