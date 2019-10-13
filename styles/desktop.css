@@ -98,6 +98,17 @@ html main {
       grid-template-columns: 200px 1fr;
 }
 
+html main #underheader {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 98;
+  grid-row: 2 / 100;
+  background-color: #282828;
+  height: 100vh;
+  z-index: 98;
+}
+
 html main section {
   display: -ms-grid;
   display: grid;
@@ -105,8 +116,7 @@ html main section {
       align-content: center;
   text-align: center;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
+  grid-column: 2;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -174,7 +184,7 @@ html main #about {
 }
 
 html main #about .title {
-  margin-left: 55px;
+  margin-left: 30px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
