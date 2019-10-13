@@ -14,49 +14,15 @@ html {
   a {
     color: $highlight;
     text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
-
   p {
     font-family: Georgia, "Times New Roman", Times, serif;
   }
-
-  main {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    #home {
-      background-attachment: fixed;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-image: url("../images/background1.jpg");
-    }
-  }
-
-  header {
-    grid-column: 1;
-    background-color: $lighterBG;
-    height: 100vh;
-    width: 200px;
-    position: fixed;
-    border-right: 1px solid $highlight;
-    z-index: 100;
-    box-shadow: 5px 0 5px;
-    margin-left: -300px;
-    transition: margin-left 1s;
-    .navButton {
-      display: block;
-      text-align: center;
-      padding: 1em 2em;
-      margin: 1.5em;
-      color: $highlight;
-      text-decoration: none;
-      border: 1px solid $highlight;
-      &:first-of-type {
-        margin-top: 230px;
-      }
-    }
-  }
-  .slideBarTrigger {
-    margin-left: 0px;
+  h1 {
+    color: $highlight;
+    font-family: $gFont;
+    font-size: 6vw;
   }
 
   #meBubble {
@@ -70,30 +36,119 @@ html {
     border: 1px solid $highlight;
     border-radius: 50%;
     margin-left: -150px;
-    z-index: 125;
+    z-index: 100;
     transition: 1s;
   }
   #meBubble.meBubbleTrigger {
-    left: 250px;
+    // left: 250px;
+    left: 200px;
     top: 15px;
     width: 200px;
     height: 200px;
   }
 
-  section {
-    display: grid;
-    align-content: center;
-    text-align: center;
-    grid-column: 1/3;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  header {
+    grid-column: 1;
+    background-color: $lighterBG;
     height: 100vh;
-    float: right;
-    background-color: $background;
-    color: $textColor;
-    scroll-snap-align: start;
-    z-index: 1;
+    width: 200px;
+    position: fixed;
+    border-right: 1px solid $highlight;
+    z-index: 99;
+    box-shadow: 5px 0 5px;
+    margin-left: -300px;
+    transition: margin-left 1s;
+    .navButton {
+      display: block;
+      text-align: center;
+      padding: 1em 2em;
+      margin: 1.5em;
+      color: $highlight;
+      text-decoration: none;
+      border: 1px solid $highlight;
+      transition: 200ms;
+      &:hover {
+        background-color: $highlight;
+        color: $darkerBG;
+      }
+      &:first-of-type {
+        margin-top: 230px;
+      }
+    }
+  }
+  .slideBarTrigger {
+    margin-left: 0px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    section {
+      display: grid;
+      align-content: center;
+      text-align: center;
+      grid-column: 2/3;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      float: right;
+      background-color: $background;
+      color: $textColor;
+      scroll-snap-align: start;
+      z-index: 2;
+    }
+    #home {
+      grid-column: 1/3;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/background1.jpg");
+      background-image: url("../images/background1.jpg");
+      #headline {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 130;
+        .myName {
+          margin-top: 290px;
+          padding-bottom: 20px;
+          text-shadow: 2px 4px #000000;
+        }
+        .greeting {
+          position: relative;
+          top: 300px;
+          right: 32vw;
+          font-family: $hFont;
+          font-size: 1.8em;
+          transform: rotate(-20deg);
+        }
+        .highlight {
+          color: $highlight;
+        }
+      }
+    }
+
+    #about {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2em;
+      align-content: start;
+      justify-items: start;
+      padding: 4em;
+      .title {
+        margin-left: 55px;
+        grid-column: 1/3;
+      }
+      p {
+        text-align: left;
+      }
+    }
   }
 
   footer {
@@ -107,48 +162,5 @@ html {
     height: 10vh;
     width: 100%;
     z-index: 200;
-  }
-
-  h1 {
-    color: $highlight;
-    font-family: $gFont;
-    font-size: 6vw;
-  }
-  #headline {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    .myName {
-      margin-top: 290px;
-      padding-bottom: 20px;
-    }
-    .greeting {
-      position: relative;
-      top: 300px;
-      right: 32vw;
-      font-family: $hFont;
-      font-size: 1.8em;
-      transform: rotate(-20deg);
-    }
-    .highlight {
-      color: $highlight;
-    }
-  }
-  #about {
-    display: grid;
-    grid-template-columns: 220px 1fr 1fr;
-    grid-gap: 2em;
-    justify-items: start;
-    .title {
-      margin-top: -150px;
-      margin-left: 55px;
-      grid-column: 2/4;
-    }
-    p {
-      text-align: left;
-    }
   }
 }

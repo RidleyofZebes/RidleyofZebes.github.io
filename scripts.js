@@ -11,3 +11,12 @@ window.onscroll = function() {
     this.document.getElementById("slideBar").className = "";
   }
 };
+
+// function trueName(boolean) {
+//   console.log("Swap!");
+//   if (boolean) {
+//     document.getElementById("myName").innerHTML = "Joey Honeycutt";
+//   } else {
+//     document.getElementById("myName").innerHTML = "Douglas J Honeycutt";
+//   }
+// }
