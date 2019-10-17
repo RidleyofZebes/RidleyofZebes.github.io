@@ -18,6 +18,10 @@ html {
   }
   p {
     font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: left;
+    &.centered {
+      text-align: center;
+    }
   }
   h1 {
     color: $highlight;
@@ -94,9 +98,9 @@ html {
         }
       }
     }
-  }
-  .slideBarTrigger {
-    margin-top: 0px;
+    &.slideBarTrigger {
+      margin-top: 0px;
+    }
   }
 
   main {
@@ -111,7 +115,8 @@ html {
       text-align: center;
       padding: 0 10px 0 10px;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
+      min-height: 100vh;
       float: right;
       background-color: $background;
       color: $textColor;
@@ -124,9 +129,9 @@ html {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center bottom;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("../images/background1.jpg");
-      //   background-image: url("../images/background1.jpg");
+      //   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      // url("../images/background1.jpg");
+      background-image: url("../images/background1.jpg");
       #headline {
         position: fixed;
         left: 0;
@@ -142,8 +147,9 @@ html {
           text-shadow: 2px 4px #000000;
         }
         .greeting {
+          text-align: center;
           position: relative;
-          top: 300px;
+          top: 290px;
           right: 32vw;
           font-family: $hFont;
           font-size: 5vw;
@@ -161,12 +167,6 @@ html {
       align-content: start;
       justify-items: start;
       padding: 4em;
-      .title {
-        margin-left: 30px;
-      }
-      p {
-        text-align: left;
-      }
     }
   }
 
