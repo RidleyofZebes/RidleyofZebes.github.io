@@ -66,6 +66,10 @@ html header {
   transition: margin-left 1s;
 }
 
+html header #menuButton {
+  display: none;
+}
+
 html header .navButton {
   display: block;
   text-align: center;
@@ -207,5 +211,6 @@ html footer {
   height: 10vh;
   width: 100%;
   z-index: 200;
+  scroll-snap-align: end;
 }
 /*# sourceMappingURL=desktop.css.map */

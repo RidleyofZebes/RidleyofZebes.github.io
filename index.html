@@ -7,25 +7,29 @@
     <link rel="stylesheet" media="screen and (min-width: 768px)" href="./styles/desktop.css" />
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="./styles/mobile.css" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20599f9147.js" crossorigin="anonymous"></script>
     <title>Douglas J. Honeycutt - Software Engineer</title>
   </head>
   <body>
-    <div id="meBubble">&nbsp;</div>
+    <a href="#home"><div id="meBubble">&nbsp;</div></a>
     <header id="slideBar">
-      <a class="navButton" href="#home">Home</a>
-      <a class="navButton" href="#about">About</a>
-      <a class="navButton" href="#portfolio">Portfolio</a>
-      <a class="navButton" href="#blog">Blog</a>
-      <a class="navButton" href="#contact">Contact</a>
+        <i id="menuButton" class="fas fa-bars" onclick="mobileMenu()"></i>
+      <div id="buttonContainer">
+        <a class="navButton" href="#home">Home</a>
+        <a class="navButton" href="#about">About</a>
+        <a class="navButton" href="#portfolio">Portfolio</a>
+        <a class="navButton" href="#blog">Blog</a>
+        <a class="navButton" href="#contact">Contact</a>
+      </div>
     </header>
     <main>
       <div id="underheader">&nbsp;</div>
       <section id="home">
-          <div id="headline"><p class="greeting">Hello, my name is</p><h1 class="myName">Douglas J Honeycutt</h1><p>I'm a remote Python and Web Developer located in Jasper, Alabama. This is my website. Want to know more? <a href="#about" class="highlight">Scroll down.</a></p></div>
+          <div id="headline"><p class="greeting">Hello, my name is</p><h1 class="myName">Douglas J Honeycutt</h1><p>I'm a freelance Python and Web Developer based out of Jasper, Alabama. This is my website. Want to know more? <a href="#about" class="highlight">Scroll down.</a></p></div>
       </section>
       <section id="about">
-        <h1 class="title">About me</h1>
+        <h1 class="title">Who am I?</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam alias odit veritatis, doloribus suscipit necessitatibus aut eaque aliquam, recusandae commodi voluptate illo ut. Animi illo maxime provident adipisci rem!</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, nesciunt. Incidunt quidem totam atque odio placeat, perferendis cupiditate consectetur voluptatibus, earum distinctio eos, corrupti optio doloribus laudantium cumque vitae quod!</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tempore blanditiis repellat voluptas, expedita, a omnis distinctio voluptatum quaerat deleniti id inventore, sunt ab suscipit? Officia nobis numquam inventore obcaecati!</p>

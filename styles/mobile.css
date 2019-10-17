@@ -1,1 +1,218 @@
-/* No CSS *//*# sourceMappingURL=mobile.css.map */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  background-color: #282828;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+}
+
+html a {
+  color: orange;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+html p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+html h1 {
+  color: orange;
+  font-family: "Merriweather", serif;
+  font-size: 6vw;
+}
+
+html #meBubble {
+  position: fixed;
+  background-image: url(../images/profile_image.jpg);
+  background-size: cover;
+  left: 50%;
+  top: 10vh;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  border: 1px solid orange;
+  border-radius: 50%;
+  z-index: 100;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html #meBubble.meBubbleTrigger {
+  left: calc(50vw - 37.5px);
+  margin-left: 0px;
+  top: 5px;
+  width: 75px;
+  height: 75px;
+}
+
+html header {
+  background-color: #383838;
+  height: 65px;
+  width: 100vw;
+  position: fixed;
+  border-bottom: 1px solid orange;
+  z-index: 99;
+  -webkit-box-shadow: 5px 0 5px;
+          box-shadow: 5px 0 5px;
+  margin-top: -70px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+html header #menuButton {
+  color: orange;
+  font-size: 45px;
+  padding: 10px 15px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+html header #buttonContainer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: -100vw;
+  margin-right: 100vw;
+  margin-top: 10px;
+  padding: 1px 25px 25px 25px;
+  background-color: #00000088;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+html header #buttonContainer.active {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+html header #buttonContainer .navButton {
+  display: block;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 1.5em;
+  color: orange;
+  background-color: #383838;
+  text-decoration: none;
+  border: 1px solid orange;
+}
+
+html header #buttonContainer .navButton:hover {
+  background-color: orange;
+  color: #181818;
+}
+
+html header #buttonContainer .navButton:first-of-type {
+  margin-top: 50px;
+}
+
+html .slideBarTrigger {
+  margin-top: 0px;
+}
+
+html main {
+  display: -ms-grid;
+  display: grid;
+}
+
+html main #underheader {
+  display: none;
+}
+
+html main section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 0 10px 0 10px;
+  width: 100vw;
+  height: 100vh;
+  float: right;
+  background-color: #282828;
+  color: gray;
+  scroll-snap-align: start;
+  scroll-margin-block-start: 30px;
+  z-index: 2;
+}
+
+html main #home {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/background1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/background1.jpg");
+}
+
+html main #home #headline {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  z-index: 130;
+}
+
+html main #home #headline .myName {
+  margin-top: 290px;
+  padding-bottom: 20px;
+  text-shadow: 2px 4px #000000;
+}
+
+html main #home #headline .greeting {
+  position: relative;
+  top: 300px;
+  right: 32vw;
+  font-family: "Handlee", cursive;
+  font-size: 5vw;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+html main #home #headline .highlight {
+  color: orange;
+}
+
+html main #about {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  justify-items: start;
+  padding: 4em;
+}
+
+html main #about .title {
+  margin-left: 30px;
+}
+
+html main #about p {
+  text-align: left;
+}
+
+html footer {
+  color: gray;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  position: absolute;
+  bottom: -10vh;
+  background-color: #181818;
+  height: 10vh;
+  width: 100%;
+  z-index: 200;
+  scroll-snap-align: end;
+}
+/*# sourceMappingURL=mobile.css.map */
