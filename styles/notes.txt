@@ -1,0 +1,8 @@
+    // Desktop:
+    @media screen and (min-width: $mobileMax){
+
+    }
+    // Mobile:
+    @media screen and (max-width: $mobileMax) {
+        
+    }
