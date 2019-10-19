@@ -126,7 +126,7 @@ html {
         .greeting {
           text-align: center;
           position: relative;
-          top: 290px;
+          top: 320px;
           right: 32vw;
           font-family: $hFont;
           font-size: 5vw;
@@ -144,8 +144,10 @@ html {
       align-content: start;
       justify-items: start;
       padding: 4em 2em;
+    }
+    #portfolio {
       .toolkits {
-        font-size: 9vw;
+        font-size: 12vw;
       }
     }
   }
