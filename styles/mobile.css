@@ -28,6 +28,10 @@ html p.centered {
   text-align: center;
 }
 
+html .highlight {
+  color: orange;
+}
+
 html h1 {
   color: orange;
   font-family: "Merriweather", serif;

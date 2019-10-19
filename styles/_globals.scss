@@ -36,6 +36,10 @@ html {
     }
   }
 
+  .highlight {
+    color: $highlight;
+  }
+
   h1 {
     color: $highlight;
     font-family: $gFont;
