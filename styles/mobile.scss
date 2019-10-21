@@ -8,9 +8,11 @@ html {
     background-size: cover;
     left: 50%;
     top: 10vh;
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
+    width: 40vh;
+    // max-width: 300px;
+    height: 40vh;
+    // max-height: 300px;
+    margin-left: -20vh;
     border: 1px solid $highlight;
     border-radius: 50%;
     z-index: 100;
@@ -94,26 +96,14 @@ html {
       float: right;
       background-color: $background;
       color: $textColor;
-      scroll-snap-align: start;
-      scroll-margin-block-start: 30px;
       z-index: 2;
     }
     #home {
-      background-attachment: fixed;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      background-image: linear-gradient(
-          rgba(28, 28, 28, 0.7),
-          rgba(28, 28, 28, 0.7)
-        ),
-        url("../images/background1.jpg");
-      //   background-image: url("../images/background1.jpg");
       #headline {
         position: fixed;
         left: 0;
         right: 0;
-        bottom: 20%;
+        bottom: 10%;
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
@@ -148,6 +138,19 @@ html {
     #portfolio {
       .toolkits {
         font-size: 12vw;
+      }
+    }
+    #contact {
+      display: grid;
+      justify-content: center;
+      form {
+        width: 90vw;
+        label {
+          display: none;
+        }
+        input {
+          margin: 10px 0;
+        }
       }
     }
   }

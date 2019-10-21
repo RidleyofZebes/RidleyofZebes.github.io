@@ -38,6 +38,83 @@ html h1 {
   font-size: 6vw;
 }
 
+html main section#home {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 28, 28, 0.7)), to(rgba(28, 28, 28, 0.7))), url("../images/background3.jpg");
+  background-image: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)), url("../images/background3.jpg");
+}
+
+html main section#contact {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 28, 28, 0.7)), to(rgba(28, 28, 28, 0.7))), url("../images/background2.jpg");
+  background-image: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)), url("../images/background2.jpg");
+}
+
+html main section#contact label {
+  color: orange;
+  float: left;
+  padding: 0.3em 0.5em;
+  font-size: 1.3em;
+}
+
+html main section#contact label:not(:first-child) {
+  margin-top: 0.7em;
+}
+
+html main section#contact input,
+html main section#contact textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #282828;
+  color: orange;
+  border: 1px solid orange;
+  resize: none;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+html main section#contact input:focus,
+html main section#contact textarea:focus {
+  background-color: #383838;
+}
+
+html main section#contact input {
+  font-family: "Merriweather", serif;
+  font-size: 1.2em;
+  padding: 0.75em 1.5em;
+}
+
+html main section#contact input[type="submit"] {
+  font-size: 1.1em;
+  color: #181818;
+  background-color: orange;
+  padding: 0.75em;
+  width: 50%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+html main section#contact input[type="submit"]:hover {
+  color: orange;
+  background-color: #181818;
+  width: 55%;
+}
+
+html main section#contact textarea {
+  font-family: "Handlee", cursive;
+  font-size: 1.5em;
+  padding: 0.75em 1em;
+  height: 30vh;
+  margin-bottom: 0.5em;
+}
+
 html footer {
   color: gray;
   display: -ms-grid;
@@ -89,11 +166,11 @@ html header {
   position: fixed;
   border-right: 1px solid orange;
   z-index: 99;
-  -webkit-box-shadow: 5px 0 5px;
-          box-shadow: 5px 0 5px;
+  -webkit-box-shadow: 5px 0 5px;
+          box-shadow: 5px 0 5px;
   margin-left: -300px;
-  -webkit-transition: margin-left 1s;
-  transition: margin-left 1s;
+  -webkit-transition: margin-left 1s;
+  transition: margin-left 1s;
 }
 
 html header #menuButton {
@@ -103,7 +180,7 @@ html header #menuButton {
 html header .navButton {
   display: block;
   text-align: center;
-  padding: 1em 2em;
+  padding: 1em 2em;
   margin: 1.5em;
   color: orange;
   text-decoration: none;
@@ -136,10 +213,9 @@ html main #underheader {
   -ms-grid-column: 1;
   grid-column: 1;
   -ms-grid-row: 2;
-  -ms-grid-row-span: 98;
-  grid-row: 2 / 100;
+  -ms-grid-row-span: 4;
+  grid-row: 2 / 6;
   background-color: #282828;
-  height: 100vh;
   z-index: 98;
 }
 
@@ -154,7 +230,7 @@ html main section {
   -ms-grid-column: 2;
   grid-column: 2;
   margin: 0;
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0 10px;
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -169,12 +245,6 @@ html main #home {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 28, 28, 0.7)), to(rgba(28, 28, 28, 0.7))), url("../images/background1.jpg");
-  background-image: linear-gradient(rgba(28, 28, 28, 0.7), rgba(28, 28, 28, 0.7)), url("../images/background1.jpg");
 }
 
 html main #home #headline {
@@ -190,7 +260,7 @@ html main #home #headline {
 html main #home #headline .myName {
   margin-top: 290px;
   padding-bottom: 20px;
-  text-shadow: 2px 4px #000000;
+  text-shadow: 2px 4px #000000;
 }
 
 html main #home #headline .greeting {
@@ -215,7 +285,7 @@ html main #about {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 2em 5em;
+  grid-gap: 2em 5em;
   -ms-flex-line-pack: start;
       align-content: start;
   justify-items: start;
@@ -250,5 +320,17 @@ html main #portfolio .title {
 
 html main #portfolio .toolkits {
   font-size: 100px;
+}
+
+html main #contact {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html main #contact form {
+  width: 50vw;
 }
 /*# sourceMappingURL=desktop.css.map */
