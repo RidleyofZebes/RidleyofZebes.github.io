@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
     <link rel="stylesheet" media="screen and (min-width: 1000px)" href="./styles/desktop.css" />
     <link rel="stylesheet" media="screen and (max-width: 1000px)" href="./styles/mobile.css" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/20599f9147.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+    <script src="https://kit.fontawesome.com/20599f9147.js" crossorigin="anonymous"></script>
     <title>Douglas J. Honeycutt - Software Engineer</title>
   </head>
   <body>
@@ -36,7 +37,7 @@
       <section id="about">
         <h1 class="title">Who am I?</h1>
         <div id="col1">
-          <p>Hello, my name is Douglas J. Honeycutt, but everyone I know calls me <span class="highlight">Joey</span>. I'm based out of <span class="highlight">Jasper, Alabama</span>. I am a husband, a father, and I am also kinda good at computering. As a matter of fact, web design, development, and programming have been my hobby and my passion for years. I now hope to be able to put my skills to work in an environment where they will be put to the test in the professional market.</p>
+          <p>Hello, my name is Douglas J. Honeycutt, but everyone I know calls me <span class="highlight">Joey</span>. I'm based out of <span class="highlight">Jasper, Alabama</span>. I am a husband, a father, and I am also kinda good at computering. As a matter of fact, web design, development, and programming have been my hobby and my passion for years. Now I'm ready to put my skills to work in an environment where they will be rigorously tested by the standards of the professional market.</p>
           <p>I cut my teeth on programming back in the late '90s with an old copy of <a href="https://en.wikipedia.org/wiki/QBasic">Microsoft QBasic</a>. I really didn't know what I was doing at the time, but making the magic box make pretty colors made me happy. I like to look at those first footsteps into this brave new world as the foundation for everything I've done since, and attribute the core of my fundamental understanding of coding to it.</p>
           <p>Not long after, I discovered HTML by modifying and tinkering with an old catalog file on a CD we had laying around. My parents got me a set of books on web design for Christmas that year and I read the covers off them. By the late '00s I had a couple of web pages online I'd coded myself and paid out of pocket to host.</p>
           <p class="centered"></p>
@@ -81,14 +82,14 @@
       <section id="contact">
         <h1>Contact</h1>
         <p class="centered">I'd love to hear from you! Get in touch and we can get things started. Trust me, I'm worth it.</p>
-        <form action="">
+        <form id="emailForm" action="http://formspree.io/JHoneycutt404@Gmail.com" method="POST">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="contact-name" placeholder="Your name" />
+          <input type="text" id="name" name="contact-name" autocomplete="off" placeholder="Your name" required />
           <label for="email">Email address:</label>
-          <input type="text" id="email" name="contact-email" placeholder="your.contact@email.net" />
+          <input type="text" id="email" name="contact-email" autocomplete="off" placeholder="your.contact@email.net" required />
           <label for="message">Message:</label>
-          <textarea id="message" name="text-body" placeholder="Your message"></textarea>
-          <input type="submit" value="Fire away!" />
+          <textarea id="message" name="text-body" placeholder="Your message" required></textarea>
+          <input id="submitEmail" type="submit" value="Fire away!" />
         </form>
       </section>
     </main>

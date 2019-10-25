@@ -39,10 +39,7 @@ function mobileMenu() {
 }
 
 window.addEventListener("click", function(event) {
-  if (
-    !this.document.getElementById("buttonContainer").contains(event.target) &&
-    !this.document.getElementById("menuButton").contains(event.target)
-  ) {
+  if (!this.document.getElementById("buttonContainer").contains(event.target) && !this.document.getElementById("menuButton").contains(event.target)) {
     this.document.getElementById("buttonContainer").className = "";
   }
 });

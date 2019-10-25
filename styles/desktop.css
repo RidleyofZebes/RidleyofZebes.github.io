@@ -7,8 +7,6 @@ html {
   position: relative;
   background-color: #282828;
   scroll-behavior: smooth;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -52,8 +50,8 @@ html main section#portfolio {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 28, 28, 0.8)), to(rgba(28, 28, 28, 0.8))), url("../images/background4.jpg");
-  background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background4.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 28, 28, 0.8)), to(rgba(28, 28, 28, 0.8))), url("../images/background5.jpg");
+  background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background5.jpg");
 }
 
 html main section#contact {
@@ -137,7 +135,6 @@ html footer {
   height: 10vh;
   width: 100%;
   z-index: 200;
-  scroll-snap-align: end;
 }
 
 html .twospan {
@@ -349,5 +346,7 @@ html main #contact {
 
 html main #contact form {
   width: 50vw;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 /*# sourceMappingURL=desktop.css.map */
