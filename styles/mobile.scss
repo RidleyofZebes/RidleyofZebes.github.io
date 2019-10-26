@@ -136,6 +136,9 @@ html {
       padding: 4em 2em;
     }
     #portfolio {
+      #project_container {
+        flex-direction: column;
+      }
       .toolkits {
         font-size: 12vw;
       }

@@ -50,9 +50,8 @@ html main section#home a {
   color: #181818;
   background-color: orange;
   padding: 0.5em 2em;
-  -webkit-transition: 1s;
-  transition: 1s;
-  border-radius: 10px;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
   border: none;
 }
 
@@ -64,6 +63,10 @@ html main section#home a:hover {
   border: 1px solid orange;
 }
 
+html main section#about a.easteregg {
+  color: #c0c0c0;
+}
+
 html main section#portfolio {
   background-attachment: fixed;
   background-size: cover;
@@ -71,6 +74,59 @@ html main section#portfolio {
   background-position: center bottom;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(28, 28, 28, 0.8)), to(rgba(28, 28, 28, 0.8))), url("../images/background5.jpg");
   background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background5.jpg");
+}
+
+html main section#portfolio #project_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+html main section#portfolio #project_container .project {
+  display: -ms-grid;
+  display: grid;
+  grid-template: "project_name project_name project_name" "screenshot   screenshot   screenshot" "description  description  language";
+  margin: 1em;
+  background-color: #282828aa;
+}
+
+html main section#portfolio #project_container .project .project_name {
+  background: #181818;
+  color: orange;
+  padding: 0.5em;
+  grid-area: project_name;
+}
+
+html main section#portfolio #project_container .project .screenshot {
+  grid-area: screenshot;
+  max-width: 100%;
+  height: auto;
+}
+
+html main section#portfolio #project_container .project .description {
+  font-size: 1em;
+  grid-area: description;
+}
+
+html main section#portfolio #project_container .project .language {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  grid-area: language;
+}
+
+html main section#portfolio #project_container .project .language i {
+  font-size: 5em;
+  line-height: 1.2em;
+}
+
+html main section#portfolio #project_container .project .description,
+html main section#portfolio #project_container .project .language {
+  padding: 1em 0.7em;
 }
 
 html main section#contact {
@@ -118,6 +174,7 @@ html main section#contact input {
 }
 
 html main section#contact input[type="submit"] {
+  font-family: "Merriweather", serif;
   font-size: 1.1em;
   color: #181818;
   background-color: orange;
@@ -311,6 +368,13 @@ html main #about {
       align-content: start;
   justify-items: start;
   padding: 4em 2em;
+}
+
+html main #portfolio #project_container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 html main #portfolio .toolkits {

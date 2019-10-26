@@ -149,6 +149,12 @@ html {
       .title {
         margin-left: 30px;
       }
+      #project_container {
+        flex-direction: row;
+        .project {
+          max-width: 33%;
+        }
+      }
       .toolkits {
         font-size: 100px;
       }
