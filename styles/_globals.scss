@@ -55,6 +55,22 @@ html {
         background-repeat: no-repeat;
         background-position: center bottom;
         background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background3.jpg");
+        a {
+          font-size: 1.1em;
+          color: $darkerBG;
+          background-color: $highlight;
+          padding: 0.5em 2em;
+          transition: 1s;
+          border-radius: 10px;
+          border: none;
+          &:hover {
+            color: $highlight;
+            background-color: $darkerBG;
+            padding-left: 6em;
+            padding-right: 6em;
+            border: 1px solid $highlight;
+          }
+        }
       }
       // &#about {
       // }
@@ -95,7 +111,7 @@ html {
           backdrop-filter: blur(3px);
         }
         input {
-          font-family: $gFont;
+          font-family: $hFont;
           font-size: 1.2em;
           padding: 0.75em 1.5em;
           &[type="submit"] {

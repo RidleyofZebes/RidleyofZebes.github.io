@@ -45,6 +45,25 @@ html main section#home {
   background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background3.jpg");
 }
 
+html main section#home a {
+  font-size: 1.1em;
+  color: #181818;
+  background-color: orange;
+  padding: 0.5em 2em;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 10px;
+  border: none;
+}
+
+html main section#home a:hover {
+  color: orange;
+  background-color: #181818;
+  padding-left: 6em;
+  padding-right: 6em;
+  border: 1px solid orange;
+}
+
 html main section#portfolio {
   background-attachment: fixed;
   background-size: cover;
@@ -93,7 +112,7 @@ html main section#contact textarea:focus {
 }
 
 html main section#contact input {
-  font-family: "Merriweather", serif;
+  font-family: "Handlee", cursive;
   font-size: 1.2em;
   padding: 0.75em 1.5em;
 }
@@ -151,13 +170,11 @@ html #meBubble {
   background-size: cover;
   left: 50%;
   top: 5vh;
-  width: 50vh;
-  height: 50vh;
-  max-width: 400px;
-  max-height: 400px;
+  width: 55vh;
+  height: 55vh;
   border: 1px solid orange;
   border-radius: 50%;
-  margin-left: -25vh;
+  margin-left: -27.5vh;
   z-index: 100;
   -webkit-transition: 1s;
   transition: 1s;
@@ -265,7 +282,7 @@ html main #home #headline {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 20%;
+  bottom: 10%;
   margin-left: auto;
   margin-right: auto;
   z-index: 130;
