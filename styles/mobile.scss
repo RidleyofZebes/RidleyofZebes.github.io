@@ -2,6 +2,10 @@
 @import "globals";
 
 html {
+  h1 {
+    font-size: 8vw;
+  }
+
   #meBubble {
     position: fixed;
     background-image: url(../images/profile_image.jpg);
@@ -112,12 +116,13 @@ html {
           margin-top: 290px;
           padding-bottom: 20px;
           text-shadow: 2px 4px #000000;
+          font-size: 8vw;
         }
         .greeting {
           text-align: center;
           position: relative;
           top: 320px;
-          right: 32vw;
+          right: 30vw;
           font-family: $hFont;
           font-size: 5vw;
           transform: rotate(-20deg);
@@ -129,18 +134,27 @@ html {
     }
 
     #about {
-      display: grid;
-      grid-gap: 2em;
-      align-content: start;
-      justify-items: start;
-      padding: 4em 2em;
+      p {
+        padding: 1em 0;
+      }
+      padding: 2em;
     }
     #portfolio {
-      #project_container {
-        flex-direction: column;
+      .title {
+        padding: 1em 0;
       }
-      .toolkits {
-        font-size: 12vw;
+      #resume {
+        grid-template-columns: 1fr;
+        #jobsCol {
+          grid-column: 1;
+        }
+        #projectsCol {
+          grid-column: 1;
+        }
+
+        .resumeColumns {
+          margin: 0.5em;
+        }
       }
     }
     #contact {

@@ -112,7 +112,7 @@ html {
           position: relative;
           text-align: center;
           top: 340px;
-          right: 32vw;
+          right: 24vw;
           font-family: $hFont;
           font-size: 1.8em;
           transform: rotate(-20deg);
@@ -125,38 +125,19 @@ html {
 
     #about {
       box-sizing: border-box;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 2em 5em;
-      align-content: start;
-      justify-items: start;
+      grid-template-columns: 1fr 3fr 1fr;
       padding: 4em;
       // min-height: 100%;
       // scroll-margin-top: 15vh;
-      .title {
-        grid-column: 1/3;
-      }
-      #col1 {
-        grid-column: 1;
-      }
-      #col2 {
+      .middle {
         grid-column: 2;
       }
     }
     #portfolio {
-      box-sizing: border-box;
       padding: 4em;
-      .title {
-        margin-left: 30px;
-      }
-      #project_container {
-        flex-direction: row;
-        .project {
-          max-width: 33%;
-        }
-      }
-      .toolkits {
-        font-size: 100px;
+      #resume {
+        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
       }
     }
     #contact {

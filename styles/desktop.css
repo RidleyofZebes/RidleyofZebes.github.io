@@ -1,13 +1,15 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
   position: relative;
   background-color: #282828;
   scroll-behavior: smooth;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html a {
@@ -20,6 +22,7 @@ html p {
   text-align: left;
   padding-bottom: 1.5em;
   max-width: 100%;
+  line-height: 1.6em;
 }
 
 html p.centered {
@@ -76,57 +79,43 @@ html main section#portfolio {
   background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background5.jpg");
 }
 
-html main section#portfolio #project_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-html main section#portfolio #project_container .project {
+html main section#portfolio #resume {
   display: -ms-grid;
   display: grid;
-  grid-template: "project_name project_name project_name" "screenshot   screenshot   screenshot" "description  description  language";
-  margin: 1em;
-  background-color: #282828aa;
 }
 
-html main section#portfolio #project_container .project .project_name {
-  background: #181818;
+html main section#portfolio .resumeColumns {
+  background-color: #282828ee;
+  margin: 2em;
+  padding: 1em;
+}
+
+html main section#portfolio .resumeColumns h2 {
+  padding: 0;
+  padding-bottom: 1em;
+}
+
+html main section#portfolio .resumeColumns h3 {
+  padding: 0 1em;
+  padding-bottom: 0.5em;
+  text-align: left;
   color: orange;
-  padding: 0.5em;
-  grid-area: project_name;
+  font-family: "Merriweather", serif;
 }
 
-html main section#portfolio #project_container .project .screenshot {
-  grid-area: screenshot;
-  max-width: 100%;
-  height: auto;
+html main section#portfolio .resumeColumns p {
+  padding: 1em;
+  padding-top: 0;
 }
 
-html main section#portfolio #project_container .project .description {
-  font-size: 1em;
-  grid-area: description;
+html main section#portfolio .resumeColumns#jobsCol {
+  -ms-grid-column: 1;
+  grid-column: 1;
 }
 
-html main section#portfolio #project_container .project .language {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  grid-area: language;
-}
-
-html main section#portfolio #project_container .project .language i {
-  font-size: 5em;
-  line-height: 1.2em;
-}
-
-html main section#portfolio #project_container .project .description,
-html main section#portfolio #project_container .project .language {
-  padding: 1em 0.7em;
+html main section#portfolio .resumeColumns#projectsCol {
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 html main section#contact {
@@ -154,23 +143,29 @@ html main section#contact textarea {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #282828;
+  background-color: #282828ee;
   color: orange;
   border: 1px solid orange;
   resize: none;
+  -webkit-transition: 200ms;
+  transition: 200ms;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
 }
 
 html main section#contact input:focus,
 html main section#contact textarea:focus {
-  background-color: #383838;
+  background-color: #181818;
 }
 
 html main section#contact input {
   font-family: "Handlee", cursive;
   font-size: 1.2em;
   padding: 0.75em 1.5em;
+}
+
+html main section#contact input:focus {
+  padding: 1.25em 1.5em;
 }
 
 html main section#contact input[type="submit"] {
@@ -193,9 +188,15 @@ html main section#contact input[type="submit"]:hover {
 html main section#contact textarea {
   font-family: "Handlee", cursive;
   font-size: 1.5em;
-  padding: 0.75em 1em;
+  padding: 1.25em 1em;
   height: 30vh;
   margin-bottom: 0.5em;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+html main section#contact textarea:focus {
+  padding: 0.75em 1em;
 }
 
 html footer {
@@ -355,7 +356,7 @@ html main #home #headline .greeting {
   position: relative;
   text-align: center;
   top: 340px;
-  right: 32vw;
+  right: 24vw;
   font-family: "Handlee", cursive;
   font-size: 1.8em;
   -webkit-transform: rotate(-20deg);
@@ -369,56 +370,23 @@ html main #home #headline .highlight {
 html main #about {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 2em 5em;
-  -ms-flex-line-pack: start;
-      align-content: start;
-  justify-items: start;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
   padding: 4em;
 }
 
-html main #about .title {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
-}
-
-html main #about #col1 {
-  -ms-grid-column: 1;
-  grid-column: 1;
-}
-
-html main #about #col2 {
+html main #about .middle {
   -ms-grid-column: 2;
   grid-column: 2;
 }
 
 html main #portfolio {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 4em;
 }
 
-html main #portfolio .title {
-  margin-left: 30px;
-}
-
-html main #portfolio #project_container {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-html main #portfolio #project_container .project {
-  max-width: 33%;
-}
-
-html main #portfolio .toolkits {
-  font-size: 100px;
+html main #portfolio #resume {
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
 }
 
 html main #contact {

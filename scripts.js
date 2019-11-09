@@ -2,7 +2,7 @@ window.onscroll = function() {
   let scrollPosY = window.pageYOffset;
   let transitionPoint = window.innerHeight;
 
-  if (scrollPosY >= transitionPoint / 2) {
+  if (scrollPosY >= transitionPoint / 4) {
     const buttons = document.getElementsByClassName("navButton");
     // console.log("activate!");
     this.document.getElementById("meBubble").className = "meBubbleTrigger";
