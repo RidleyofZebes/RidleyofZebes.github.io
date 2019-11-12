@@ -135,6 +135,7 @@ html {
     }
     #portfolio {
       padding: 4em;
+      align-content: space-between;
       #resume {
         // grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr 4fr 1fr;
