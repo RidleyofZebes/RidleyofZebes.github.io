@@ -47,10 +47,11 @@ html ul {
 
 html ul li {
   display: inline-block;
+  padding: 0.2em 1em;
 }
 
-html ul li:not(:last-child)::after {
-  content: " | ";
+html ul li:not(:last-child) {
+  border-right: 1px solid #c0c0c0;
 }
 
 html main section {
