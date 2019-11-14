@@ -20,7 +20,7 @@ html {
   position: relative;
   background-color: $background;
   scroll-behavior: smooth;
-  // scroll-snap-type: y proximity;
+  scroll-snap-type: y proximity;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   a {
@@ -47,18 +47,35 @@ html {
     color: $highlight;
     font-family: $gFont;
     font-size: 6vw;
-    // padding: 0.5em;
   }
+
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        &::after {
+          content: " | ";
+        }
+      }
+    }
+  }
+
   //   header {
   //   }
   main {
     section {
+      scroll-snap-align: start;
       &#home {
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center bottom;
-        background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background3.jpg");
+        background-image: linear-gradient(
+            rgba(28, 28, 28, 0.8),
+            rgba(28, 28, 28, 0.8)
+          ),
+          url("../images/background3.jpg");
         a {
           font-size: 1.1em;
           color: $darkerBG;
@@ -85,7 +102,11 @@ html {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center bottom;
-        background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background5.jpg");
+        background-image: linear-gradient(
+            rgba(28, 28, 28, 0.8),
+            rgba(28, 28, 28, 0.8)
+          ),
+          url("../images/background5.jpg");
         #resume {
           display: grid;
         }
@@ -121,7 +142,11 @@ html {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center bottom;
-        background-image: linear-gradient(rgba(28, 28, 28, 0.8), rgba(28, 28, 28, 0.8)), url("../images/background2.jpg");
+        background-image: linear-gradient(
+            rgba(28, 28, 28, 0.8),
+            rgba(28, 28, 28, 0.8)
+          ),
+          url("../images/background2.jpg");
         label {
           color: $highlight;
           float: left;
@@ -193,6 +218,6 @@ html {
     height: 10vh;
     width: 100%;
     z-index: 200;
-    // scroll-snap-align: end;
+    scroll-snap-align: end;
   }
 }
