@@ -242,6 +242,10 @@ html .twospan {
   grid-column: 1 / 3;
 }
 
+html body {
+  position: relative;
+}
+
 html #meBubble {
   position: fixed;
   background-image: url(../images/profile_image.jpg);
@@ -260,72 +264,86 @@ html #meBubble {
 
 html #meBubble.meBubbleTrigger {
   margin-left: -150px;
-  left: 200px;
-  top: 15px;
-  width: 200px;
-  height: 200px;
+  left: 155px;
+  top: 5px;
+  width: 110px;
+  height: 110px;
 }
 
 html header {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  background-color: #383838;
-  height: 100vh;
-  width: 200px;
   position: fixed;
-  border-right: 1px solid orange;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  margin-top: -100px;
+  background-color: #383838aa;
   z-index: 99;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-bottom: 1px solid orange;
   -webkit-box-shadow: 5px 0 5px;
           box-shadow: 5px 0 5px;
-  margin-left: -300px;
-  -webkit-transition: margin-left 1s;
-  transition: margin-left 1s;
+}
+
+html header::before {
+  content: "DougJHoneycutt.com";
+  position: absolute;
+  padding-top: 8px;
+  padding-left: 130px;
+  font-family: "Merriweather", serif;
+  color: orange;
+  font-size: 40px;
 }
 
 html header #menuButton {
   display: none;
 }
 
-html header .navButton {
-  display: block;
+html header #navButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+html header #navButtons a {
+  float: right;
   text-align: center;
-  padding: 1em 2em;
-  margin: 1.5em;
+  padding: 1em;
+  width: 150px;
   color: orange;
   text-decoration: none;
-  border: 1px solid orange;
+  border-left: 1px solid orange;
   -webkit-transition: 200ms;
   transition: 200ms;
 }
 
-html header .navButton:hover {
+html header #navButtons a:hover {
   background-color: orange;
   color: #181818;
 }
 
-html header .navButton:first-of-type {
-  margin-top: 230px;
+html header #navButtons a:last-of-type {
+  margin-right: 15px;
 }
 
 html .slideBarTrigger {
-  margin-left: 0px;
+  margin-top: 0px;
 }
 
 html main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 200px 1fr;
-      grid-template-columns: 200px 1fr;
-}
-
-html main #underheader {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  grid-row: 2 / 6;
-  background-color: #282828;
-  z-index: 98;
 }
 
 html main section {

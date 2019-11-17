@@ -1,19 +1,18 @@
+let toggle = false;
 window.onscroll = function() {
   let scrollPosY = window.pageYOffset;
   let transitionPoint = window.innerHeight;
 
   if (scrollPosY >= transitionPoint / 4) {
-    const buttons = document.getElementsByClassName("navButton");
     // console.log("activate!");
-    this.document.getElementById("meBubble").className = "meBubbleTrigger";
-    this.document.getElementById("slideBar").className = "slideBarTrigger";
+    this.resetMenu();
   } else {
-    this.document.getElementById("meBubble").className = "";
-    this.document.getElementById("slideBar").className = "";
+    this.resetMenu(true);
   }
 
   if (scrollPosY <= transitionPoint / 2) {
-    this.document.getElementById("buttonContainer").className = "";
+    this.document.getElementById("navButtons").className = "";
+    toggle = !toggle;
   }
 };
 
@@ -26,20 +25,42 @@ window.onscroll = function() {
 //   }
 // }
 
-let toggle = false;
+function showMenu() {
+  this.document.getElementById("meBubble").className =
+    "meBubbleTrigger menuTrigger";
+  this.document.getElementById("navButtons").className = "menuTrigger";
+  this.document.getElementById("slideBar").className =
+    "slideBarTrigger menuTrigger";
+}
+
+function resetMenu(hideMenu) {
+  this.document.getElementById("navButtons").className = "";
+  this.document.getElementById("slideBar").className = "slideBarTrigger";
+  this.document.getElementById("meBubble").className = "meBubbleTrigger";
+  toggle = false;
+
+  if (hideMenu) {
+    this.document.getElementById("slideBar").className = "";
+    this.document.getElementById("meBubble").className = "";
+  }
+}
+
 function mobileMenu() {
-  const buttons = document.getElementById("buttonContainer");
-  console.log(toggle);
   toggle = !toggle;
   if (toggle) {
-    buttons.className = "active";
+    showMenu();
   } else {
-    buttons.className = "";
+    resetMenu();
   }
 }
 
 window.addEventListener("click", function(event) {
-  if (!this.document.getElementById("buttonContainer").contains(event.target) && !this.document.getElementById("menuButton").contains(event.target)) {
-    this.document.getElementById("buttonContainer").className = "";
+  if (
+    !this.document.getElementById("navButtons").contains(event.target) &&
+    !this.document.getElementById("menuButton").contains(event.target) &&
+    !this.document.getElementById("meBubble").contains(event.target)
+  ) {
+    resetMenu();
+    toggle = false;
   }
 });

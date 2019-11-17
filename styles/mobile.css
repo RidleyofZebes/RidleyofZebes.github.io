@@ -262,8 +262,12 @@ html #meBubble.meBubbleTrigger {
   height: 75px;
 }
 
+html #meBubble.meBubbleTrigger.menuTrigger {
+  left: 120vw;
+}
+
 html header {
-  background-color: #383838;
+  background-color: #383838aa;
   height: 65px;
   width: 100vw;
   position: fixed;
@@ -280,59 +284,62 @@ html header #menuButton {
   color: orange;
   font-size: 45px;
   padding: 10px 15px;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  float: left;
 }
 
-html header #buttonContainer {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-left: -100vw;
-  margin-right: 100vw;
-  margin-top: 10px;
-  padding: 1px 25px 25px 25px;
-  background-color: #00000088;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  border-radius: 30px;
+html header #navButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  width: 80vw;
+  height: 100vh;
+  margin-left: -80vw;
+  left: 0;
+  background-color: #282828ee;
+  -webkit-box-shadow: 0 5px 5px;
+          box-shadow: 0 5px 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-html header #buttonContainer.active {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+html header #navButtons a {
+  float: left;
+  border-bottom: 2px solid #383838;
+  padding: 1em 0.3em 1em 0.5em;
+  font-size: 20px;
 }
 
-html header #buttonContainer .navButton {
-  display: block;
-  text-align: center;
-  padding: 1em 2em;
-  margin: 1.5em;
-  color: orange;
-  background-color: #383838;
-  text-decoration: none;
-  border: 1px solid orange;
+html header #navButtons a::after {
+  content: ">";
+  float: right;
+  font-weight: 900;
 }
 
-html header #buttonContainer .navButton:hover {
+html header #navButtons a:hover {
   background-color: orange;
   color: #181818;
 }
 
-html header #buttonContainer .navButton:first-of-type {
-  margin-top: 50px;
+html header #navButtons.menuTrigger {
+  left: 80vw;
 }
 
 html header.slideBarTrigger {
   margin-top: 0px;
 }
 
+html header.slideBarTrigger.menuTrigger {
+  margin-left: 80vw;
+}
+
 html main {
   display: -ms-grid;
   display: grid;
-}
-
-html main #underheader {
-  display: none;
 }
 
 html main section {
