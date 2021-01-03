@@ -101,6 +101,12 @@ html {
       color: $textColor;
       z-index: 2;
       scroll-margin-top: 65px;
+      &.headline {
+        min-height: 100%;
+        height: 100%;
+        padding: 50px;
+        // letter-spacing: 0.8em;
+      }
     }
     #home {
       #headline {
@@ -162,12 +168,16 @@ html {
       justify-content: center;
       form {
         width: 90vw;
+
         label {
           display: none;
         }
         input,
         textarea {
-          margin: 10px;
+          margin: 0 10px 0 10px;
+          &#submitEmail {
+            margin-top: 10px;
+          }
         }
       }
     }

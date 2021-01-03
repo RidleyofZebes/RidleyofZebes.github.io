@@ -108,7 +108,7 @@ html {
       text-align: center;
       grid-column: 2;
       margin: 0;
-      padding: 0 10px 0 10px;
+      padding: 100px 10px 0 10px;
       width: 100%;
       height: 100%;
       min-height: 100vh;
@@ -117,6 +117,12 @@ html {
       color: $textColor;
       scroll-snap-align: start;
       z-index: 2;
+      &.headline {
+        min-height: 100%;
+        height: 100%;
+        padding: 20px;
+        // letter-spacing: 0.8em;
+      }
     }
     #home {
       grid-column: 1/3;
@@ -151,7 +157,7 @@ html {
     #about {
       box-sizing: border-box;
       grid-template-columns: 1fr 3fr 1fr;
-      padding: 4em;
+      padding: 100px 4em 4em 4em;
       // min-height: 100%;
       // scroll-margin-top: 15vh;
       .middle {
@@ -159,7 +165,7 @@ html {
       }
     }
     #portfolio {
-      padding: 4em;
+      padding: 100px 4em 4em 4em;
       align-content: space-between;
       #resume {
         // grid-template-columns: 1fr 1fr;
